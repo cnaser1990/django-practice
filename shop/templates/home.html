@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+    <ol>
+        {% for i in mobiles %}
+            <li><a href="{% url 'detail' i.id %}">{{i.name}}</a></li>
+            <img src="{{i.photo.url}}" alt="">
+        {% endfor %}
+    </ol>
+{% endblock content%}

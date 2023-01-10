@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <img src="{{detail.photo.url}}" alt="">
+    <p>{{detail.name}}</p>
+    <p>{{detail.description}}</p>
+    <p>{{detail.price}}</p>
+    <p>{{detail.author}}</p>
+    <p>{{detail.created}}</p>
+{% endblock content %}
