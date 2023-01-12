@@ -3,10 +3,18 @@
 
 
 {% block content %}
-    <ol>
+    
         {% for i in mobiles %}
-            <li><a href="{% url 'detail' i.id %}">{{i.name}}</a></li>
-            <img src="{{i.photo.url}}" alt="">
+            <div class="card" style="width: 18rem; display:inline-block">
+                {% if i.photo %}
+                    <img src="{{i.photo.url}}" class="card-img-top" alt="" width="50px" height="300px">
+                {% endif %}
+                
+                <div class="card-body">
+                    <a href="{% url 'detail' i.id %}"><button type="button" class="btn btn-outline-info">{{i.name}}</button></a>
+                </div>
+            </div>
+                
         {% endfor %}
-    </ol>
+    
 {% endblock content%}
